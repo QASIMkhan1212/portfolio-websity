@@ -25,7 +25,7 @@ const Navbar = () => {
           src={logoPlaceholderPath}
           alt="M.Qasim Logo"
           className="w-40 h-40 rounded-full object-cover mr-0"
-          onError={(e) => { e.target.src = '/images/logo.png'; }}
+          onError={(e) => { (e.target as HTMLImageElement).src = '/images/logo.png'; }}
         />
         {/* <span className="text-xl font-bold text-gray-800">M.QASIM</span> */}
       </div>
@@ -166,7 +166,7 @@ const Hero = () => {
                   alt="Professional portfolio image placeholder"
                   className="w-full h-full object-cover"
                   style={{ width: '200%', height: '100%' }} 
-                  onError={(e) => { e.target.src = 'https://placehold.co/400x500/A0CCE3/FFFFFF?text=M.QASIM'; }}
+                  onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/400x500/A0CCE3/FFFFFF?text=M.QASIM'; }}
                 />
               </div>
 
@@ -326,7 +326,7 @@ const AchievementsSection = () => {
                     src={imageUrl}
                     alt={`${title} certificate from ${issuer}`}
                     className="w-full h-full object-cover transition duration-500 group-hover:opacity-80"
-                    onError={(e) => { e.target.src = imageUrl; }} // Use the placeholder as fallback
+                    onError={(e) => { (e.target as HTMLImageElement).src = imageUrl; }} // Use the placeholder as fallback
                 />
                 <div className="absolute inset-0 bg-white-100 opacity-0 group-hover:opacity-10 transition duration-300"></div>
             </div>
@@ -443,7 +443,7 @@ const PortfolioSection = () => {
                     src={imageUrl}
                     alt={imageAlt}
                     className="w-full h-full object-cover rounded-lg transform transition duration-500 group-hover:scale-105"
-                    onError={(e) => { e.target.src = 'https://placehold.co/600x400/F0F4FF/4338CA?text=Project+Mockup'; }}
+                    onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/F0F4FF/4338CA?text=Project+Mockup'; }}
                 />
             </div>
             
@@ -537,7 +537,7 @@ const AboutMe = () => {
                     alt="M.Qasim professional portrait placeholder"
                     // Ensures the image covers the 400x100 container
                     className="w-full h-full object-cover" 
-                    onError={(e) => { e.target.src = 'https://placehold.co/400x100/5E5497/FFFFFF?text=ABOUT+IMAGE'; }}
+                    onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/400x100/5E5497/FFFFFF?text=ABOUT+IMAGE'; }}
                 />
             </div>
           </div>
@@ -888,7 +888,7 @@ const Footer = () => {
     //           src={logoPlaceholderPath}
     //           alt="M.Qasim Logo"
     //           className="w-8 h-8 rounded-full object-cover mr-2"
-    //           onError={(e) => { e.target.src = 'https://placehold.co/32x32/FFFFFF/1E293B?text=Logo'; }}
+    //           onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/32x32/FFFFFF/1E293B?text=Logo'; }}
     //         />
     //         <span className="text-xl font-bold text-white">M.QASIM</span>
     //       </div>
